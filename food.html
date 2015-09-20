@@ -1,0 +1,475 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Sci-Food Form</title>
+<script src="http://code.jquery.com/jquery-latest.js" type="text/javascript"></script>
+
+
+<style>
+* {
+margin:0;
+padding:0;	
+}
+
+#wrapper {
+width:960px;
+margin:0 auto;	
+}
+
+h1 {
+padding-top:20px;
+color:purple;	
+}
+
+#hp {
+float:left;	
+width:250px;
+}
+
+#st {
+float:right;
+width:250px;	
+}
+
+fieldset {
+width:300px;	
+	
+}
+
+p {
+margin-bottom:10px;	
+}
+
+#potter-appetizer{display:none} 
+#treck-appetizer{display:none}
+
+#potter-main{display:none} 
+#treck-main{display:none}
+
+#potter-side{display:none} 
+#treck-side{display:none}
+
+#potter-beverage{display:none} 
+#treck-beverage{display:none}
+
+#potter-dessert{display:none} 
+#treck-dessert{display:none}
+
+h2 {
+font-weight:bold;
+color:#D4A017;	
+}
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+
+<h1>Sci-Food Form</h1>
+<h2>Appetizers:</h2>
+<p>Select one, but no more than two appetizers from either the Harry Potter menu or the Star treck menu:</p>
+
+<form id="myForm" action="http://www.newmanic.com/formtest.asp" method="post">
+
+<div style="margin-bottom:20px" id="appetizers" >
+  <input style="margin-top:10px; margin-bottom:5px; margin-right:5px" type="radio" name="appetizer-radiobutton" id="radio-hp" />Harry Potter Appetizers<br />
+  <input style="margin-top:10px;margin-bottom:5px; margin-right:5px" type ="radio" name="appetizer-radiobutton" id="radio-st" >Star Treck Appetizers<br />
+</div>
+
+<div id="potter-appetizer">
+
+	<fieldset>
+	<input type="checkbox" name="potter-appetizer" value="Leek-y-Cauldren Soup" style="margin-left:20px; margin-top:10px;margin-bottom:5px; margin-right:5px" />Leek-y-Cauldren Soup<br />
+	<input type="checkbox" name="potter-appetizer" value="Nimbus Treats" style="margin-left:20px;margin-bottom:5px;margin-right:5px" />Nimbus Treats<br />
+	<input type="checkbox" name="potter-appetizer" value="Melon Brain" style="margin-left:20px;margin-bottom:10px; margin-right:5px" />Melon Brain<br />
+
+</fieldset>
+</div><!--end potter-appetizer-->
+
+
+<div id="treck-appetizer">
+	<fieldset>	    
+	<input type="checkbox" name="treck-appetizer" value="Tube Grubs" style="margin-left:20px; margin-top:10px;margin-bottom:5px; margin-right:5px" />Tube Grubs<br />
+	<input type="checkbox" name="treck-appetizer" value="Owon Eggs" style="margin-left:20px;margin-bottom:5px;margin-right:5px" />Owon Eggs<br />
+	<input type="checkbox" name="treck-appetizer" value="Gagh" style="margin-left:20px;margin-bottom:10px; margin-right:5px" />Gagh<br />
+ 
+</fieldset>
+</div><!--end treck-appetizer-->
+
+
+<!--end appetizer category-->
+
+<h2>Main:</h2>
+<p>Select one main course from the Harry Potter menu or the Star treck menu:</p>
+
+
+<div style="margin-bottom:20px" id="main" >
+  <input style="margin-top:10px;margin-bottom:5px; margin-right:5px" type="radio" id="radio-hp1" name="main-radiobutton" />Harry Potter Main Course<br />
+  <input style="margin-top:10px;margin-bottom:5px; margin-right:5px" type ="radio" id="radio-st1" name="main-radiobutton" />Star Treck Main Course<br />
+</div>
+
+<div id="potter-main">
+
+	<fieldset>
+	<input type="checkbox" name="potter-main" value="Quidditch Player’s Pie" style="margin-left:20px; margin-top:10px;margin-bottom:5px; margin-right:5px" />Quidditch Player’s Pie<br />
+	<input type="checkbox" name="potter-main" value="Shepherd’s Pie by Sabrina" style="margin-left:20px;margin-bottom:5px;margin-right:5px" />Shepherd’s Pie by Sabrina<br />
+	<input type="checkbox" name="potter-main" value="Bangers and Mash" style="margin-left:20px;margin-bottom:10px; margin-right:5px" />Bangers and Mash<br /> 
+
+</fieldset>
+</div><!--end potter-main-->
+
+
+<div id="treck-main">
+	<fieldset>	    
+	<input type="checkbox" name="treck-main" value="Rokeg Blood Pie" style="margin-left:20px; margin-top:10px;margin-bottom:5px; margin-right:5px" />Rokeg Blood Pie<br />
+	<input type="checkbox" name="treck-main" value="Hasperat" style="margin-left:20px;margin-bottom:5px;margin-right:5px" />Hasperat<br />
+	<input type="checkbox" name="treck-main" value="Luhvian Quail" style="margin-left:20px;margin-bottom:10px; margin-right:5px" />Luhvian Quail<br />
+ 
+</fieldset>
+</div><!--end treck-main-->
+
+<!--end main category-->
+
+<h2>Sides:</h2>
+<p>Select one, but no more than three sides from either the Harry Potter menu or the Star treck menu:</p>
+
+
+<div style="margin-bottom:20px" id="side" >
+  <input style="margin-top:10px;margin-bottom:5px; margin-right:5px" type="radio" id="radio-hp2" name="side-radiobutton" />Harry Potter Sides<br />
+  <input style="margin-top:10px;margin-bottom:5px; margin-right:5px" type ="radio" id="radio-st2" name="side-radiobutton" />Star Treck Sides<br />
+</div>
+
+<div id="potter-side">
+
+	<fieldset>
+	<input type="checkbox" name="potter-side" value="Mini Dragon Eggs" style="margin-left:20px; margin-top:10px;margin-bottom:5px; margin-right:5px" />Mini Dragon Eggs<br />
+	<input type="checkbox" name="potter-side" value="Vol-au-Vents" style="margin-left:20px;margin-bottom:5px;margin-right:5px" />Vol-au-Vents <br />
+	<input type="checkbox" name="potter-side" value="Pumpkin Pasties by Sophie" style="margin-left:20px;margin-bottom:10px; margin-right:5px" />Pumpkin Pasties by Sophie<br /> 
+
+</fieldset>
+</div><!--end potter-side-->
+
+
+<div id="treck-side">
+	<fieldset>	    
+	<input type="checkbox" name="treck-side" value="Heart of Targ" style="margin-left:20px; margin-top:10px;margin-bottom:5px; margin-right:5px" />Heart of Targ<br />
+	<input type="checkbox" name="treck-side" value="Algae Puffs" style="margin-left:20px;margin-bottom:5px;margin-right:5px" />Algae Puffs<br />
+	<input type="checkbox" name="treck-side" value="Seltin Pâté" style="margin-left:20px;margin-bottom:10px; margin-right:5px" />Seltin Pâté<br />
+ 
+</fieldset>
+</div><!--end treck-side-->
+
+
+
+<!--end sides category-->
+
+<h2>Beverages:</h2>
+<p>Select one beverage from either the Harry Potter menu or the Star treck menu:</p>
+
+
+<div style="margin-bottom:20px" id="beverage" >
+  <input style="margin-top:10px;margin-bottom:5px; margin-right:5px" type="radio" id="radio-hp3" name="beverage-radiobutton" />Harry Potter Beverages<br />
+  <input style="margin-top:10px;margin-bottom:5px; margin-right:5px" type ="radio" id="radio-st3" name="beverage-radiobutton" />Star Treck Beverages<br />
+</div>
+
+<div id="potter-beverage">
+
+	<fieldset>
+	<input type="checkbox" name="potter-beverage" value="Gillywater" style="margin-left:20px; margin-top:10px;margin-bottom:5px; margin-right:5px" />Gillywater<br />
+	<input type="checkbox" name="potter-beverage" value="Butterbeer" style="margin-left:20px;margin-bottom:5px;margin-right:5px" />Butterbeer<br />
+	<input type="checkbox" name="potter-beverage" value="Pumpkin Juice" style="margin-left:20px;margin-bottom:10px; margin-right:5px" />Pumpkin Juice<br /> 
+
+</fieldset>
+</div><!--end potter-beverage-->
+
+
+<div id="treck-beverage">
+	<fieldset>	    
+	<input type="checkbox" name="treck-beverage" value="Romulan Ale" style="margin-left:20px; margin-top:10px;margin-bottom:5px; margin-right:5px" />Romulan Ale<br />
+	<input type="checkbox" name="treck-beverage" value="Klingon Bloodwine" style="margin-left:20px;margin-bottom:5px;margin-right:5px" />Klingon Bloodwine<br />
+	<input type="checkbox" name="treck-beverage" value="Acamarian brandy" style="margin-left:20px;margin-bottom:10px; margin-right:5px" />Acamarian Brandy<br />
+ 
+</fieldset>
+</div><!--end treck-beverage-->
+
+<h2>Desserts:</h2>
+<p>Select one dessert from either the Harry Potter menu or the Star treck menu:</p>
+
+
+<div style="margin-bottom:20px" id="dessert" >
+  <input style="margin-top:10px;margin-bottom:5px; margin-right:5px" type="radio" id="radio-hp4" name="dessert-radiobutton" />Harry Potter Dessert<br />
+  <input style="margin-top:10px;margin-bottom:5px; margin-right:5px" type ="radio" id="radio-st4" name="dessert-radiobutton" />Star Treck Dessert<br />
+</div>
+
+<div id="potter-dessert">
+
+	<fieldset>
+	<input type="checkbox" name="potter-dessert" value="Hogwarts Letter Cookies" style="margin-left:20px; margin-top:10px;margin-bottom:5px; margin-right:5px" />Hogwarts Letter Cookies<br />
+	<input type="checkbox" name="potter-dessert" value="Double Chocolate Cauldron Cakes" style="margin-left:20px;margin-bottom:5px;margin-right:5px" />Double Chocolate Cauldron Cakes<br />
+	<input type="checkbox" name="potter-dessert" value="Honeydukes: Peppermint Toads" style="margin-left:20px;margin-bottom:10px; margin-right:5px" />Honeydukes: Peppermint Toads<br /> 
+
+</fieldset>
+</div><!--end potter-dessert-->
+
+
+<div id="treck-dessert">
+	<fieldset>	    
+	<input type="checkbox" name="treck-dessert" value="Larish Pie" style="margin-left:20px; margin-top:10px;margin-bottom:5px; margin-right:5px" />Larish Pie<br />
+	<input type="checkbox" name="treck-dessert" value="Koganka pudding" style="margin-left:20px;margin-bottom:5px;margin-right:5px" />Koganka pudding<br />
+	<input type="checkbox" name="treck-dessert" value="Uttaberry crêpe" style="margin-left:20px;margin-bottom:10px; margin-right:5px" />Uttaberry crêpe<br />
+ 
+</fieldset>
+
+</div><!--end potter-dessert-->
+
+
+<!--end desert category-->
+
+
+
+
+
+
+
+<input type="submit" value="Submit" style="margin-top:10px; margin-bottom:10px"/><br />
+</form>
+
+
+<script type="text/javascript" >
+
+$("document").ready(function() {
+$("#appetizers").click(function(){
+if ($("#radio-hp").is(":checked")) {
+
+        //show the hidden harry potter div and hide star treck div
+         $("#potter-appetizer").show("slide");
+ $("#treck-appetizer").hide();
+    } else {
+$("#radio-st").is(":checked")
+//show the hidden star treck div and hide the harry potter div
+       $("#treck-appetizer").show("slide");
+ $("#potter-appetizer").hide();
+    }
+});
+
+	
+	
+<!--end appetizer script-->
+
+
+$("#main").click(function(){
+if ($("#radio-hp1").is(":checked")) {
+
+        //show the hidden harry potter div and hide star treck div
+         $("#potter-main").show("slide");
+ $("#treck-main").hide();
+
+    } else {
+$("#radio-st1").is(":checked")
+//show the hidden star treck div and hide the harry potter div
+       $("#treck-main").show("slide");
+ $("#potter-main").hide();
+
+    }
+});
+
+<!---end main script---->
+
+
+
+
+$("#side").click(function(){
+if ($("#radio-hp2").is(":checked")) {
+
+        //show the hidden harry potter div and hide star treck div
+         $("#potter-side").show("slide");
+ $("#treck-side").hide();
+
+    } else {
+$("#radio-st2").is(":checked")
+//show the hidden star treck div and hide the harry potter div
+       $("#treck-side").show("slide");
+ $("#potter-side").hide();
+
+    }
+});
+
+<!--end side script-->
+
+$("#beverage").click(function(){
+if ($("#radio-hp3").is(":checked")) {
+
+        //show the hidden harry potter div and hide star treck div
+         $("#potter-beverage").show("slide");
+ $("#treck-beverage").hide();
+
+    } else {
+$("#radio-st3").is(":checked")
+//show the hidden star treck div and hide the harry potter div
+       $("#treck-beverage").show("slide");
+ $("#potter-beverage").hide();
+
+    }
+});
+
+<!--end beverage script-->
+
+$("#dessert").click(function(){
+if ($("#radio-hp4").is(":checked")) {
+
+        //show the hidden harry potter div and hide star treck div
+         $("#potter-dessert").show("slide");
+ $("#treck-dessert").hide();
+
+    } else {
+$("#radio-st4").is(":checked")
+//show the hidden star treck div and hide the harry potter div
+       $("#treck-dessert").show("slide");
+ $("#potter-dessert").hide();
+
+    }
+});
+
+<!--end desserts script-->
+
+$("#myForm").submit(function(){
+  
+var potterChecked = $('#potter-appetizer input:checkbox:checked').length;
+var treckChecked = $('#treck-appetizer input:checkbox:checked').length;
+var potterradio = $('#radio-hp:checked').length;
+var treckradio = $('#radio-st:checked').length;
+
+var potterChecked1 = $('#potter-main input:checkbox:checked').length;
+var treckChecked1 = $('#treck-main input:checkbox:checked').length;
+var potterradio1 = $('#radio-hp1:checked').length;
+var treckradio1 = $('#radio-st1:checked').length;
+
+var potterChecked2 = $('#potter-side input:checkbox:checked').length;
+var treckChecked2 = $('#treck-side input:checkbox:checked').length;
+var potterradio2 = $('#radio-hp2:checked').length;
+var treckradio2 = $('#radio-st2:checked').length;
+
+var potterChecked3 = $('#potter-beverage input:checkbox:checked').length;
+var treckChecked3 = $('#treck-beverage input:checkbox:checked').length;
+var potterradio3 = $('#radio-hp3:checked').length;
+var treckradio3 = $('#radio-st3:checked').length;
+
+var potterChecked4 = $('#potter-dessert input:checkbox:checked').length;
+var treckChecked4 = $('#treck-dessert input:checkbox:checked').length;
+var potterradio4 = $('#radio-hp4:checked').length;
+var treckradio4 = $('#radio-st4:checked').length;
+
+
+	if(potterradio==1){
+		if (potterChecked < 1 || potterChecked > 2){
+				alert("Please select only 1-2 Harry Potter appetizers!");
+			//e.preventDefault();	
+			return false;
+		}	
+	
+	}
+	
+	
+	
+	
+		if(treckradio==1) {
+			if (treckChecked < 1 || treckChecked > 2){
+				alert("Please select only 1-2 Star Treck appetizers!");
+				//e.preventDefault();
+				return false;		
+			}
+		} 
+	<!--end appetizers check-->
+		
+	if(potterradio1==1){
+		if (potterChecked1 < 1 || potterChecked1 > 1){
+				alert("Please select only 1 Harry Potter main course!");
+			//e.preventDefault();	
+			return false;
+		}	
+	
+	}
+	
+	if(treckradio1==1) {
+		if (treckChecked1 < 1 || treckChecked1 > 1){
+				alert("Please select only 1 Star Treck main course!");
+				//e.preventDefault();
+				return false;		
+			}
+		} 
+		<!--end main check-->
+		
+		if(potterradio2==1){
+		if (potterChecked2 < 1 || potterChecked2 > 3){
+				alert("Please select only 1-3 Harry Potter sides!");
+			//e.preventDefault();	
+			return false;
+		}	
+	
+	}
+	
+	if(treckradio2==1) {
+		if (treckChecked2 < 1 || treckChecked2 > 3){
+				alert("Please select only 1-3 Star Treck sides!");
+				//e.preventDefault();
+				return false;		
+			}
+		} 
+		
+		
+		
+		
+		
+		<!--end side check-->
+		
+			if(potterradio3==1){
+		if (potterChecked3 < 1 || potterChecked3 > 1){
+				alert("Please select only 1 Harry Potter beverage!");
+			//e.preventDefault();	
+			return false;
+		}	
+	
+	}
+	
+	if(treckradio3==1) {
+		if (treckChecked3 < 1 || treckChecked3 > 1){
+				alert("Please select only 1 Star Treck beverage!");
+				//e.preventDefault();
+				return false;		
+			}
+		} 
+		
+		
+		
+		<!--end beverage check-->
+		
+				if(potterradio4==1){
+		if (potterChecked4 < 1 || potterChecked4 > 1){
+				alert("Please select only 1 Harry Potter dessert!");
+			//e.preventDefault();	
+			return false;
+		}	
+	
+	}
+	
+	if(treckradio4==1) {
+		if (treckChecked4 < 1 || treckChecked4 > 1){
+				alert("Please select only 1 Star Treck dessert!");
+				//e.preventDefault();
+				return false;		
+			}
+		} 
+		
+		
+		
+		<!--end dessert check-->
+	});
+
+});
+</script>
+
+
+</div><!--end wrapper-->
+</body>
+</html>
